@@ -31,7 +31,7 @@ type (
 	Runner struct {
 		UUID     string            `ignored:"true"`
 		Name     string            `envconfig:"GITEA_RUNNER_NAME"`
-		Token    string            `ignored:"true"`
+		Token    string            `ignored:"false"`
 		Capacity int               `envconfig:"GITEA_RUNNER_CAPACITY" default:"1"`
 		File     string            `envconfig:"FORGEJO_RUNNER_FILE" default:".runner"`
 		Environ  map[string]string `envconfig:"GITEA_RUNNER_ENVIRON"`
